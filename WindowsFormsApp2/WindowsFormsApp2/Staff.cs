@@ -174,7 +174,102 @@ namespace WindowsFormsApp2
             }
         }
 
+        private void Bnt_Sua_Click(object sender, EventArgs e)
+        {
+            string sql, gt;
+            if(tblNhanVien.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if(Txt_MaNv.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if(Txt_TenNV.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn phải nhập tên nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Txt_TenNV.Focus();
+                return;
+            }
+            if(Txt_DiaChi.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn phải nhập địa chỉ nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Txt_DiaChi.Focus();
+                return;
+            }
+            if(Txt_DienThoai.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn phải nhập số điện thoại nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                Txt_DienThoai.Focus();
+                return;
+            }
+            if(dt_NgaySinh.Text.Trim() == "/ /")
+            {
+                MessageBox.Show("Bạn phải nhập ngày sinh nhân viên", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dt_NgaySinh.Focus();
+                return;
+            }
+            if(!Function.IsDate(dt_NgaySinh.Text))
+            {
+                MessageBox.Show("Bạn phải nhập lại ngày sinh", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                dt_NgaySinh.Text = "";
+                dt_NgaySinh.Focus();
+                return;
+            }
+            if (Cb_GioiTinh.Checked == true)
+            {
+                gt = "Nam";
+            }
+            else
+                gt = "Nữ";
+            sql = "UPDATE tblNhanvien SET Tennhanvien =N'" + Txt_TenNV.Text.Trim().ToString() +
+            "' ,Diachi =N'" + Txt_DiaChi.Text.Trim().ToString() +
+                "' ,Dienthoai=N'" + Txt_DienThoai.Text.Trim().ToString() +
+                "' ,Gioitinh =N'" + gt + 
+                "' ,Ngaysinh =N'" + Function.ConvertDateTime(dt_NgaySinh.Text) +
+                "' WHERE Manhanvien=N'" + Txt_MaNv.Text + "'";
 
-        
+            Function.RunSQL(sql);
+            MessageBox.Show("Sửa Mã nhân viên '"+Txt_MaNv.Text+"'thành công  ");
+            LoadData();
+            ResetValue();
+        }
+
+        private void Btn_Xoa_Click(object sender, EventArgs e)
+        {
+            string sql;
+            if (tblNhanVien.Rows.Count == 0)
+            {
+                MessageBox.Show("Không còn dữ liệu!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (Txt_MaNv.Text.Trim() == "")
+            {
+                MessageBox.Show("Bạn chưa chọn bản ghi nào", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if (MessageBox.Show("Bạn có muốn xóa mã nhân viên '"+Txt_MaNv.Text+ "' không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK ) 
+            {
+                sql = "DELETE tblNhanvien WHERE Manhanvien=N'" + Txt_MaNv.Text + "'";
+               
+
+
+                Function.RunSQL(sql);
+                
+               
+                MessageBox.Show("Xóa mã nhân viên '"+Txt_MaNv.Text+"'thành công");
+                LoadData();
+                ResetValue();
+            }
+
+           
+        }
+
+        private void Btn_Thoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

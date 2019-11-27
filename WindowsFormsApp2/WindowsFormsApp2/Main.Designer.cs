@@ -105,21 +105,21 @@
             // staffToolStripMenuItem
             // 
             this.staffToolStripMenuItem.Name = "staffToolStripMenuItem";
-            this.staffToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.staffToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.staffToolStripMenuItem.Text = "Staff";
             this.staffToolStripMenuItem.Click += new System.EventHandler(this.staffToolStripMenuItem_Click);
             // 
             // customerToolStripMenuItem
             // 
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.customerToolStripMenuItem.Text = "Customer";
             this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
             // 
             // stockToolStripMenuItem
             // 
             this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
-            this.stockToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.stockToolStripMenuItem.Text = "Stock";
             this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
             // 
@@ -134,8 +134,9 @@
             // billOfSaleToolStripMenuItem
             // 
             this.billOfSaleToolStripMenuItem.Name = "billOfSaleToolStripMenuItem";
-            this.billOfSaleToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
+            this.billOfSaleToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.billOfSaleToolStripMenuItem.Text = "Bill of Sale";
+            this.billOfSaleToolStripMenuItem.Click += new System.EventHandler(this.billOfSaleToolStripMenuItem_Click);
             // 
             // findingToolStripMenuItem
             // 

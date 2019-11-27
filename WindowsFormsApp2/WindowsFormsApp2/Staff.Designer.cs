@@ -194,6 +194,7 @@
             this.Btn_Thoat.TabIndex = 24;
             this.Btn_Thoat.Text = "Đóng";
             this.Btn_Thoat.UseVisualStyleBackColor = false;
+            this.Btn_Thoat.Click += new System.EventHandler(this.Btn_Thoat_Click);
             // 
             // Bnt_Luu
             // 
@@ -219,6 +220,7 @@
             this.Btn_Xoa.TabIndex = 22;
             this.Btn_Xoa.Text = "Xóa";
             this.Btn_Xoa.UseVisualStyleBackColor = false;
+            this.Btn_Xoa.Click += new System.EventHandler(this.Btn_Xoa_Click);
             // 
             // Bnt_Sua
             // 
@@ -231,6 +233,7 @@
             this.Bnt_Sua.TabIndex = 21;
             this.Bnt_Sua.Text = "Sửa";
             this.Bnt_Sua.UseVisualStyleBackColor = false;
+            this.Bnt_Sua.Click += new System.EventHandler(this.Bnt_Sua_Click);
             // 
             // Bnt_Them
             // 

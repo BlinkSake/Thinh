@@ -53,7 +53,7 @@ namespace WindowsFormsApp2
 
         private void categoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Category category = new Category();
+            Materials category = new Materials();
             category.ShowDialog();
         }
 
@@ -78,6 +78,12 @@ namespace WindowsFormsApp2
         {
             Stock stock = new Stock();
             stock.ShowDialog();
+        }
+
+        private void billOfSaleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Bill bill = new Bill();
+            bill.ShowDialog();
         }
     }
 }

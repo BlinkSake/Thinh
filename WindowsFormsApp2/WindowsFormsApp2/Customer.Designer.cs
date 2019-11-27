@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Txt_Dienthoai = new System.Windows.Forms.TextBox();
+            this.Txt_Diachi = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Txt_Tenkhach = new System.Windows.Forms.TextBox();
+            this.Txt_Makhach = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Bnt_Dong = new System.Windows.Forms.Button();
+            this.Btn_Luu = new System.Windows.Forms.Button();
+            this.Btn_Xoa = new System.Windows.Forms.Button();
+            this.Bnt_Sua = new System.Windows.Forms.Button();
+            this.Btn_Them = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,19 +57,19 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Danh mục khách hàng";
             // 
-            // textBox3
+            // Txt_Dienthoai
             // 
-            this.textBox3.Location = new System.Drawing.Point(797, 141);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(281, 22);
-            this.textBox3.TabIndex = 20;
+            this.Txt_Dienthoai.Location = new System.Drawing.Point(797, 141);
+            this.Txt_Dienthoai.Name = "Txt_Dienthoai";
+            this.Txt_Dienthoai.Size = new System.Drawing.Size(281, 22);
+            this.Txt_Dienthoai.TabIndex = 20;
             // 
-            // textBox4
+            // Txt_Diachi
             // 
-            this.textBox4.Location = new System.Drawing.Point(797, 102);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(281, 22);
-            this.textBox4.TabIndex = 19;
+            this.Txt_Diachi.Location = new System.Drawing.Point(797, 102);
+            this.Txt_Diachi.Name = "Txt_Diachi";
+            this.Txt_Diachi.Size = new System.Drawing.Size(281, 22);
+            this.Txt_Diachi.TabIndex = 19;
             // 
             // label4
             // 
@@ -93,19 +93,19 @@
             this.label5.TabIndex = 17;
             this.label5.Text = "Địa chỉ";
             // 
-            // textBox2
+            // Txt_Tenkhach
             // 
-            this.textBox2.Location = new System.Drawing.Point(168, 140);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(281, 22);
-            this.textBox2.TabIndex = 16;
+            this.Txt_Tenkhach.Location = new System.Drawing.Point(168, 140);
+            this.Txt_Tenkhach.Name = "Txt_Tenkhach";
+            this.Txt_Tenkhach.Size = new System.Drawing.Size(281, 22);
+            this.Txt_Tenkhach.TabIndex = 16;
             // 
-            // textBox1
+            // Txt_Makhach
             // 
-            this.textBox1.Location = new System.Drawing.Point(168, 101);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(281, 22);
-            this.textBox1.TabIndex = 15;
+            this.Txt_Makhach.Location = new System.Drawing.Point(168, 101);
+            this.Txt_Makhach.Name = "Txt_Makhach";
+            this.Txt_Makhach.Size = new System.Drawing.Size(281, 22);
+            this.Txt_Makhach.TabIndex = 15;
             // 
             // label3
             // 
@@ -137,84 +137,87 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(1053, 280);
             this.dataGridView1.TabIndex = 21;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // button5
+            // Bnt_Dong
             // 
-            this.button5.BackColor = System.Drawing.SystemColors.Window;
-            this.button5.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button5.Location = new System.Drawing.Point(947, 522);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(127, 35);
-            this.button5.TabIndex = 29;
-            this.button5.Text = "Đóng";
-            this.button5.UseVisualStyleBackColor = false;
+            this.Bnt_Dong.BackColor = System.Drawing.SystemColors.Window;
+            this.Bnt_Dong.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bnt_Dong.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Bnt_Dong.Location = new System.Drawing.Point(947, 522);
+            this.Bnt_Dong.Name = "Bnt_Dong";
+            this.Bnt_Dong.Size = new System.Drawing.Size(127, 35);
+            this.Bnt_Dong.TabIndex = 29;
+            this.Bnt_Dong.Text = "Đóng";
+            this.Bnt_Dong.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // Btn_Luu
             // 
-            this.button4.BackColor = System.Drawing.SystemColors.Window;
-            this.button4.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button4.Location = new System.Drawing.Point(700, 522);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(127, 35);
-            this.button4.TabIndex = 28;
-            this.button4.Text = "Lưu";
-            this.button4.UseVisualStyleBackColor = false;
+            this.Btn_Luu.BackColor = System.Drawing.SystemColors.Window;
+            this.Btn_Luu.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Luu.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Btn_Luu.Location = new System.Drawing.Point(700, 522);
+            this.Btn_Luu.Name = "Btn_Luu";
+            this.Btn_Luu.Size = new System.Drawing.Size(127, 35);
+            this.Btn_Luu.TabIndex = 28;
+            this.Btn_Luu.Text = "Lưu";
+            this.Btn_Luu.UseVisualStyleBackColor = false;
+            this.Btn_Luu.Click += new System.EventHandler(this.Btn_Luu_Click);
             // 
-            // button3
+            // Btn_Xoa
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.Window;
-            this.button3.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.Location = new System.Drawing.Point(479, 522);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(127, 35);
-            this.button3.TabIndex = 27;
-            this.button3.Text = "Xóa";
-            this.button3.UseVisualStyleBackColor = false;
+            this.Btn_Xoa.BackColor = System.Drawing.SystemColors.Window;
+            this.Btn_Xoa.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Xoa.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Btn_Xoa.Location = new System.Drawing.Point(479, 522);
+            this.Btn_Xoa.Name = "Btn_Xoa";
+            this.Btn_Xoa.Size = new System.Drawing.Size(127, 35);
+            this.Btn_Xoa.TabIndex = 27;
+            this.Btn_Xoa.Text = "Xóa";
+            this.Btn_Xoa.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // Bnt_Sua
             // 
-            this.button2.BackColor = System.Drawing.SystemColors.Window;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button2.Location = new System.Drawing.Point(235, 522);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 35);
-            this.button2.TabIndex = 26;
-            this.button2.Text = "Sửa";
-            this.button2.UseVisualStyleBackColor = false;
+            this.Bnt_Sua.BackColor = System.Drawing.SystemColors.Window;
+            this.Bnt_Sua.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bnt_Sua.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Bnt_Sua.Location = new System.Drawing.Point(235, 522);
+            this.Bnt_Sua.Name = "Bnt_Sua";
+            this.Bnt_Sua.Size = new System.Drawing.Size(127, 35);
+            this.Bnt_Sua.TabIndex = 26;
+            this.Bnt_Sua.Text = "Sửa";
+            this.Bnt_Sua.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // Btn_Them
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Window;
-            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.button1.Location = new System.Drawing.Point(21, 522);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(127, 35);
-            this.button1.TabIndex = 25;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = false;
+            this.Btn_Them.BackColor = System.Drawing.SystemColors.Window;
+            this.Btn_Them.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Btn_Them.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.Btn_Them.Location = new System.Drawing.Point(21, 522);
+            this.Btn_Them.Name = "Btn_Them";
+            this.Btn_Them.Size = new System.Drawing.Size(127, 35);
+            this.Btn_Them.TabIndex = 25;
+            this.Btn_Them.Text = "Thêm";
+            this.Btn_Them.UseVisualStyleBackColor = false;
+            this.Btn_Them.Click += new System.EventHandler(this.Btn_Them_Click);
             // 
             // Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1316, 656);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Bnt_Dong);
+            this.Controls.Add(this.Btn_Luu);
+            this.Controls.Add(this.Btn_Xoa);
+            this.Controls.Add(this.Bnt_Sua);
+            this.Controls.Add(this.Btn_Them);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.Txt_Dienthoai);
+            this.Controls.Add(this.Txt_Diachi);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Txt_Tenkhach);
+            this.Controls.Add(this.Txt_Makhach);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -222,6 +225,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Customer";
+            this.Load += new System.EventHandler(this.Customer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -231,19 +235,19 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox Txt_Dienthoai;
+        private System.Windows.Forms.TextBox Txt_Diachi;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_Tenkhach;
+        private System.Windows.Forms.TextBox Txt_Makhach;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Bnt_Dong;
+        private System.Windows.Forms.Button Btn_Luu;
+        private System.Windows.Forms.Button Btn_Xoa;
+        private System.Windows.Forms.Button Bnt_Sua;
+        private System.Windows.Forms.Button Btn_Them;
     }
 }
